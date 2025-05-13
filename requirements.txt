@@ -1,0 +1,9 @@
+flask==2.3.3
+python-dotenv==1.0.0
+PyPDF2==3.0.1
+Werkzeug==2.3.7
+google-generativeai==0.3.1
+gunicorn==21.2.0
+gevent==23.9.1
+# Para manejar archivos de audio de manera eficiente
+pydub==0.25.1

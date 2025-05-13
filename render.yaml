@@ -1,0 +1,14 @@
+services:
+  # Servicio web
+  - type: web
+    name: stem-analisis-linguistico
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # Esto indica que se configurará manualmente en el panel de Render
+      - key: PYTHONUNBUFFERED
+        value: true
+    # Asegura que haya suficiente memoria para procesar archivos de audio grandes
+    plan: free  # Puedes cambiarlo a un plan pagado si necesitas más recursos
